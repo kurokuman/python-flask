@@ -1,5 +1,7 @@
-from flask import Flask
-from flask import jsonify
+#run command
+# FASK_APP=main.py flask run
+
+from flask import Flask, request, jsonify
 from DataStore.MySQL import MySQL
 dns = {
     'user': 'root',
@@ -23,3 +25,12 @@ def user(id):
     user = db.query(stmt, id, prepared=True)
     print(user)
     return jsonify({"user_id": user[0][0], "user_name": user[0][1]}), 200
+
+
+#(mimeがapplication/jsonで送られている)
+# Content-Type: application/json" --data '{"key": "value"}'
+@app.route('/post_data', methods=['GET', 'POST'])
+def check():
+    if request.method == 'POST':
+        data = request.json['key']
+    return data
