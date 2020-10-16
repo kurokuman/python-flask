@@ -1,5 +1,5 @@
 #run command
-# FASK_APP=main.py flask run
+# FLASK_APP=main.py flask run
 
 from flask import Flask, request, jsonify
 from DataStore.MySQL import MySQL
