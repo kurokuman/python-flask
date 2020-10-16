@@ -4,7 +4,7 @@
 # FLASK_APP=main.py flask run
 
 from flask import Flask, request, jsonify
-from DataStore.MySQL import MySQL
+from MySQL import MySQL
 dns = {
     'user': 'root',
     'host': 'localhost',
