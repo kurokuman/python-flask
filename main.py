@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 #run command
 # FLASK_APP=main.py flask run
 
